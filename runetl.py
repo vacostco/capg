@@ -344,7 +344,7 @@ def find_first_price(stk_id):
             break
 
 """
-Reads all the input CSV files and writes PRICE.csv and VOLUME.csv
+Reads all the input CSV files and writes PRICE.csv and VOLUME.csv and GAINS.csv
 """
 def runetl(csvfiles):
     global NUMCPU, ALL_DAYS
@@ -353,6 +353,7 @@ def runetl(csvfiles):
     else:        
         NUMCPU = min(NUMCPU, len(ALLCSV))
         logging.info(f"Using {NUMCPU} processors to extract data from {ALLCSV} ...")
+        
         start = time()
         with ThreadPoolExecutor(max_workers=NUMCPU) as executor:
             # Distribute the reading of CSV, one file per CPU (or thread)
