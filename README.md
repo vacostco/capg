@@ -10,7 +10,7 @@ These files can serve as examples of how to run the `gencsv.py` and `runetl.py` 
 - `runetl.py` Run this program to read the input data and aggregate it into three output files: `PRICE.csv` and `VOLUME.csv` and `GAINS.csv` (These files can then be loaded into the DB). Example ```python runetl.py *.csv```
 - `testall.sh` This script will setup and run all the unit-tests for `runetl.py`, these tests are defined in `testetl.py`
 ## Other Files 
-**These files were created over the course of development, but are unlikely to run on any other machine (besides my own)**
+**These files were created for my own benefit and are unlikely to run on anyone else's computer**
 - `load-sql.sh` Run this script to load `PRICE.csv` and `VOLUME.csv` and `GAINS.csv` into MySQL
 - `returns.sql` This sql file will load `PRICE.csv` and `VOLUME.csv` and `GAINS.csv` into a MySQL DB and report the stock returns from inception date to the last date.
 - `setup.sh` This file helps me track all the necessary dependencies that need to be installed
