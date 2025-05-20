@@ -32,6 +32,25 @@ def create_rows(rows):
         for row in rows:
             print(row, file=choice(allcsv))
 
+def test_avg():
+    avg = Average()
+    avg.add(1)
+    avg.add(1)
+    avg.add(1)
+    assert avg.value() == 1, "The average is one"
+    avg = Average()
+    avg.add(2)
+    avg.add(10)
+    assert avg.value() == 6, "The average is six"
+    avg = Average()
+    avg.add(2.2)
+    avg.add(2)
+    assert avg.value() == 2.1, "The average is 2.1"
+    avg = Average()
+    avg.add(-1)
+    avg.add(9)
+    assert avg.value() == 4, "The average is 4"
+
 def test_when_no_files():
     setup_test()
     nrows_read = runetl(get_csv_names())
@@ -70,9 +89,9 @@ def test_read_rand_row():
 
 def test_data_read():
     setup_test()
-    create_rows(['2001-1-1,7,0.05,100', '1999-4-01,111,3,1', '1999-4-01,111,9.0,1'])
+    create_rows(['2001-1-1,7,0.05,100', '1999-4-01,111,3,1', '1999-4-01,111,9.0,1', '2001-1-1,111,13,100'])
     nrows_read = runetl(get_csv_names())
-    assert nrows_read == 3, "Three rows were written"
+    assert nrows_read == 4, "Four rows were written"
     days = get_days_read()
     earliest = days[0]
     latest = days[-1]
@@ -85,21 +104,3 @@ def test_data_read():
     assert prices[latest][7].value() == 0.05, "The latest price was 0.05"
     assert volume[latest][7] == 100, "The latest volume was 100"
 
-def test_avg():
-    avg = Average()
-    avg.add(1)
-    avg.add(1)
-    avg.add(1)
-    assert avg.value() == 1, "The average is one"
-    avg = Average()
-    avg.add(2)
-    avg.add(10)
-    assert avg.value() == 6, "The average is six"
-    avg = Average()
-    avg.add(2.2)
-    avg.add(2)
-    assert avg.value() == 2.1, "The average is 2.1"
-    avg = Average()
-    avg.add(-1)
-    avg.add(9)
-    assert avg.value() == 4, "The average is 4"

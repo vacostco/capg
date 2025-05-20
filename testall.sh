@@ -7,5 +7,5 @@ read -p "Type 'yes' to continue or anything else to cancel: " confirmation
 if [[ "$confirmation" == "yes" ]]; then
     pip install pytest
     rm *.csv
-    pytest -v test_etl.py
+    pytest -v testetl.py
 fi

@@ -57,9 +57,9 @@ The sorted list of all days read from the input files - used to share the single
 ALL_DAYS = None
 
 """
-Used to track the current price of each stk_id when traversing the sparse array AGGREGATED_PRICES
+Captures the price of the stk_id at the begining of the period
 """
-PRICE_TRACKER = [None] * 200
+FIRST_PRICE = [None] * 200 
 
 """
 Holds the validated csv data read
@@ -109,12 +109,12 @@ class Average:
 Useful for testing
 """      
 def reset_globals():
-    global NUM_ROWS_READ, AGGREGATED_PRICES, AGGREGATED_VOLUME, ALL_DAYS, PRICE_TRACKER
+    global NUM_ROWS_READ, AGGREGATED_PRICES, AGGREGATED_VOLUME, ALL_DAYS, FIRST_PRICE
     NUM_ROWS_READ = 0
     AGGREGATED_PRICES = {}
     AGGREGATED_VOLUME = {}
     ALL_DAYS = None
-    PRICE_TRACKER = [None] * 200
+    FIRST_PRICE = [None] * 200
 
 """
 Useful for testing
@@ -145,7 +145,7 @@ Check that input files exist
 """
 def input_files_exist(csvfiles):
     global ALLCSV
-    ALLCSV = [fpath for fpath in csvfiles if not fpath.endswith("PRICE.csv") and not fpath.endswith("VOLUME.csv")]
+    ALLCSV = [fpath for fpath in csvfiles if not fpath.endswith("PRICE.csv") and not fpath.endswith("VOLUME.csv") and not fpath.endswith("GAINS.csv")]
     for fpath in ALLCSV:
         if not path.exists(fpath):
             logging.error("No such file {fpath}")
@@ -259,30 +259,45 @@ def etlcsv(fpath):
     logging.debug(f"Done reading {fpath}")
 
 """
-Writes PRICE.csv = a csv file, to be loaded into the DB, which is backfilled to not be sparse.  An id that is never traded will have price values of 0
+Writes PRICE.csv a csv file, to be loaded into the DB, which is backfilled to not be sparse.  An id that is never traded will have price values of 0
+Writes GAINS.csv which holds the daily gain relative to the first day of the period
 """
-def write_price_csv():
+def write_price_and_gains_csv():
     logging.info(f"Writing PRICE.csv ...")
-    with open("PRICE.csv", "w") as report:
+    logging.info(f"Writing GAINS.csv ...")
+    gainsrow = None
+    with open("PRICE.csv", "w") as pricecsv, open("GAINS.csv", "w") as gainscsv:        
         header = "date"
         for id in ALLIDS:
             header += f",stk_{id:03d}"
-        print(header, file=report)
+        print(header, file=pricecsv)
+        # initialize the price tracker (accounts for missing data in the sparse array)
+        price_tracker = FIRST_PRICE[:]
         for day in ALL_DAYS:
-            row = [day]
+            pricerow = [day]
+            gainsrow = [day]
             for id in ALLIDS:
                 # get the current price from the tracker
-                price = PRICE_TRACKER[id-1]
+                price = price_tracker[id-1]
                 # if the tracked price is None, the id was never traded; so its price is 0
                 price = 0 if price is None else price
                 if id in AGGREGATED_PRICES[day]:
-                    # there was a trad on this day
+                    # there was a trade on this day
                     price = AGGREGATED_PRICES[day][id].value()
                     # update the current price
-                    PRICE_TRACKER[id-1] = price
-                row.append("{:.2f}".format(price))
-            print(",".join(row), file=report)
+                    price_tracker[id-1] = price
+                # compute the daily gain
+                first_price = FIRST_PRICE[id-1]
+                gain = (price - first_price) / first_price if first_price is not None else 0
+                pricerow.append("{:.2f}".format(price))
+                gainsrow.append("{:.2f}".format(gain))
+            print(",".join(pricerow), file=pricecsv)
+            print(",".join(gainsrow), file=gainscsv)
     logging.debug(f"Done Writing PRICE.csv")
+    logging.debug(f"Done Writing GAINS.csv")
+    if gainsrow is not None:
+        for id in ALLIDS:
+            logging.debug(f"Gain for stk_{id:03d} was {gainsrow[id]}")
 
 """
 Writes VOLUME.csv - a csv file, to be loaded into the DB, which is backfilled to not be sparse.  The volume for an id that is not traded on a given day is 0
@@ -308,10 +323,10 @@ def write_volume_csv():
 Initializes PRICE_TRACKER with the earliest trade price found for id in AGGREGATED_PRICES
 """
 def find_first_price(stk_id):
-    global PRICE_TRACKER
+    global FIRST_PRICE
     for day in ALL_DAYS:
         if stk_id in AGGREGATED_PRICES[day]:
-            PRICE_TRACKER[stk_id-1] = AGGREGATED_PRICES[day][stk_id].value()
+            FIRST_PRICE[stk_id-1] = AGGREGATED_PRICES[day][stk_id].value()
             break
 
 """
@@ -329,16 +344,18 @@ def runetl(csvfiles):
             # Distribute the reading of CSV, one file per CPU (or thread)
             executor.map(etlcsv, ALLCSV)
         # Sort the data once
-        ALL_DAYS = sorted(AGGREGATED_PRICES.keys())                      
+        ALL_DAYS = sorted(AGGREGATED_PRICES.keys())        
         with ThreadPoolExecutor(max_workers=NUMCPU) as executor:
-            # Initialize PRICE_TRACKER, one id per CPU (or thread)
+            # Initialize FIRST_PRICE, one id per CPU (or thread)
             executor.map(find_first_price, ALLIDS)
         end = time()    
-        logging.info(f"Read {NUM_ROWS_READ} rows in {end-start:.2f} seconds.")            
+        logging.info(f"Read {NUM_ROWS_READ} rows in {end-start:.2f} seconds.")
+        if len(ALL_DAYS) > 1:
+            logging.info(f"The period read was [{ALL_DAYS[0]}, {ALL_DAYS[-1]}]")       
 
         # Write outpt
-        write_price_csv()
         write_volume_csv()        
+        write_price_and_gains_csv()        
         
         end = time()
         logging.info(f"Done in {end-start:.2f} seconds.")
