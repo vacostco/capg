@@ -1,5 +1,6 @@
 import logging
-from os import cpu_count, path
+from argparse import ArgumentParser
+from os import cpu_count, path, listdir
 from concurrent.futures import ThreadPoolExecutor
 from threading import Lock
 from re import match
@@ -11,12 +12,12 @@ Timestamped log messages are written to stdout
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s::%(levelname)s - %(message)s')
 
 """
-The total number of CPUs available on this machine, up to a maximum of 10
+The total number of CPUs available on this machine
 """
-NUMCPU = min(10,cpu_count()) # will be 4 on the target machine
+NUMCPU = cpu_count() # will be 4 on the target machine
 
 """
-The list of input files, naming convention "D{i}.csv"
+The list of input files
 """
 ALLCSV = [f"D{i}.csv" for i in range(10)]
 
@@ -142,10 +143,13 @@ def get_volumes_read():
 """
 Check that input files exist
 """
-def input_files_exist():
+def input_files_exist(csvfiles):
+    global ALLCSV
+    ALLCSV = [fpath for fpath in csvfiles if not fpath.endswith("PRICE.csv") and not fpath.endswith("VOLUME.csv")]
     for fpath in ALLCSV:
         if not path.exists(fpath):
-            return False
+            logging.error("No such file {fpath}")
+            return False    
     return True
 
 """
@@ -313,11 +317,12 @@ def find_first_price(stk_id):
 """
 Reads all the input CSV files and writes PRICE.csv and VOLUME.csv
 """
-def runetl():
-    global ALL_DAYS
-    if not input_files_exist() :
+def runetl(csvfiles):
+    global NUMCPU, ALL_DAYS
+    if not input_files_exist(csvfiles):
         logging.critical("Missing input files.")
     else:        
+        NUMCPU = min(NUMCPU, len(ALLCSV))
         logging.info(f"Using {NUMCPU} processors to extract data from {ALLCSV} ...")
         start = time()
         with ThreadPoolExecutor(max_workers=NUMCPU) as executor:
@@ -341,4 +346,7 @@ def runetl():
     return NUM_ROWS_READ        
     
 if __name__ == "__main__":
-    runetl()
+    parser = ArgumentParser(description="Run the ETL process on the trade data")
+    parser.add_argument('files', metavar='csv_file', type=str, nargs='+', help='List of input files')
+    args = parser.parse_args()
+    runetl(args.files)

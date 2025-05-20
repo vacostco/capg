@@ -427,414 +427,810 @@ IGNORE 1 LINES;
 
 DROP TABLE IF EXISTS GAINS;
 CREATE TABLE GAINS (
-    date VARCHAR(10),
-    stk_001 DECIMAL(8,2),
-    stk_002 DECIMAL(8,2),
-    stk_003 DECIMAL(8,2),
-    stk_004 DECIMAL(8,2),
-    stk_005 DECIMAL(8,2),
-    stk_006 DECIMAL(8,2),
-    stk_007 DECIMAL(8,2),
-    stk_008 DECIMAL(8,2),
-    stk_009 DECIMAL(8,2),
-    stk_010 DECIMAL(8,2),
-    stk_011 DECIMAL(8,2),
-    stk_012 DECIMAL(8,2),
-    stk_013 DECIMAL(8,2),
-    stk_014 DECIMAL(8,2),
-    stk_015 DECIMAL(8,2),
-    stk_016 DECIMAL(8,2),
-    stk_017 DECIMAL(8,2),
-    stk_018 DECIMAL(8,2),
-    stk_019 DECIMAL(8,2),
-    stk_020 DECIMAL(8,2),
-    stk_021 DECIMAL(8,2),
-    stk_022 DECIMAL(8,2),
-    stk_023 DECIMAL(8,2),
-    stk_024 DECIMAL(8,2),
-    stk_025 DECIMAL(8,2),
-    stk_026 DECIMAL(8,2),
-    stk_027 DECIMAL(8,2),
-    stk_028 DECIMAL(8,2),
-    stk_029 DECIMAL(8,2),
-    stk_030 DECIMAL(8,2),
-    stk_031 DECIMAL(8,2),
-    stk_032 DECIMAL(8,2),
-    stk_033 DECIMAL(8,2),
-    stk_034 DECIMAL(8,2),
-    stk_035 DECIMAL(8,2),
-    stk_036 DECIMAL(8,2),
-    stk_037 DECIMAL(8,2),
-    stk_038 DECIMAL(8,2),
-    stk_039 DECIMAL(8,2),
-    stk_040 DECIMAL(8,2),
-    stk_041 DECIMAL(8,2),
-    stk_042 DECIMAL(8,2),
-    stk_043 DECIMAL(8,2),
-    stk_044 DECIMAL(8,2),
-    stk_045 DECIMAL(8,2),
-    stk_046 DECIMAL(8,2),
-    stk_047 DECIMAL(8,2),
-    stk_048 DECIMAL(8,2),
-    stk_049 DECIMAL(8,2),
-    stk_050 DECIMAL(8,2),
-    stk_051 DECIMAL(8,2),
-    stk_052 DECIMAL(8,2),
-    stk_053 DECIMAL(8,2),
-    stk_054 DECIMAL(8,2),
-    stk_055 DECIMAL(8,2),
-    stk_056 DECIMAL(8,2),
-    stk_057 DECIMAL(8,2),
-    stk_058 DECIMAL(8,2),
-    stk_059 DECIMAL(8,2),
-    stk_060 DECIMAL(8,2),
-    stk_061 DECIMAL(8,2),
-    stk_062 DECIMAL(8,2),
-    stk_063 DECIMAL(8,2),
-    stk_064 DECIMAL(8,2),
-    stk_065 DECIMAL(8,2),
-    stk_066 DECIMAL(8,2),
-    stk_067 DECIMAL(8,2),
-    stk_068 DECIMAL(8,2),
-    stk_069 DECIMAL(8,2),
-    stk_070 DECIMAL(8,2),
-    stk_071 DECIMAL(8,2),
-    stk_072 DECIMAL(8,2),
-    stk_073 DECIMAL(8,2),
-    stk_074 DECIMAL(8,2),
-    stk_075 DECIMAL(8,2),
-    stk_076 DECIMAL(8,2),
-    stk_077 DECIMAL(8,2),
-    stk_078 DECIMAL(8,2),
-    stk_079 DECIMAL(8,2),
-    stk_080 DECIMAL(8,2),
-    stk_081 DECIMAL(8,2),
-    stk_082 DECIMAL(8,2),
-    stk_083 DECIMAL(8,2),
-    stk_084 DECIMAL(8,2),
-    stk_085 DECIMAL(8,2),
-    stk_086 DECIMAL(8,2),
-    stk_087 DECIMAL(8,2),
-    stk_088 DECIMAL(8,2),
-    stk_089 DECIMAL(8,2),
-    stk_090 DECIMAL(8,2),
-    stk_091 DECIMAL(8,2),
-    stk_092 DECIMAL(8,2),
-    stk_093 DECIMAL(8,2),
-    stk_094 DECIMAL(8,2),
-    stk_095 DECIMAL(8,2),
-    stk_096 DECIMAL(8,2),
-    stk_097 DECIMAL(8,2),
-    stk_098 DECIMAL(8,2),
-    stk_099 DECIMAL(8,2),
-    stk_100 DECIMAL(8,2),
-    stk_101 DECIMAL(8,2),
-    stk_102 DECIMAL(8,2),
-    stk_103 DECIMAL(8,2),
-    stk_104 DECIMAL(8,2),
-    stk_105 DECIMAL(8,2),
-    stk_106 DECIMAL(8,2),
-    stk_107 DECIMAL(8,2),
-    stk_108 DECIMAL(8,2),
-    stk_109 DECIMAL(8,2),
-    stk_110 DECIMAL(8,2),
-    stk_111 DECIMAL(8,2),
-    stk_112 DECIMAL(8,2),
-    stk_113 DECIMAL(8,2),
-    stk_114 DECIMAL(8,2),
-    stk_115 DECIMAL(8,2),
-    stk_116 DECIMAL(8,2),
-    stk_117 DECIMAL(8,2),
-    stk_118 DECIMAL(8,2),
-    stk_119 DECIMAL(8,2),
-    stk_120 DECIMAL(8,2),
-    stk_121 DECIMAL(8,2),
-    stk_122 DECIMAL(8,2),
-    stk_123 DECIMAL(8,2),
-    stk_124 DECIMAL(8,2),
-    stk_125 DECIMAL(8,2),
-    stk_126 DECIMAL(8,2),
-    stk_127 DECIMAL(8,2),
-    stk_128 DECIMAL(8,2),
-    stk_129 DECIMAL(8,2),
-    stk_130 DECIMAL(8,2),
-    stk_131 DECIMAL(8,2),
-    stk_132 DECIMAL(8,2),
-    stk_133 DECIMAL(8,2),
-    stk_134 DECIMAL(8,2),
-    stk_135 DECIMAL(8,2),
-    stk_136 DECIMAL(8,2),
-    stk_137 DECIMAL(8,2),
-    stk_138 DECIMAL(8,2),
-    stk_139 DECIMAL(8,2),
-    stk_140 DECIMAL(8,2),
-    stk_141 DECIMAL(8,2),
-    stk_142 DECIMAL(8,2),
-    stk_143 DECIMAL(8,2),
-    stk_144 DECIMAL(8,2),
-    stk_145 DECIMAL(8,2),
-    stk_146 DECIMAL(8,2),
-    stk_147 DECIMAL(8,2),
-    stk_148 DECIMAL(8,2),
-    stk_149 DECIMAL(8,2),
-    stk_150 DECIMAL(8,2),
-    stk_151 DECIMAL(8,2),
-    stk_152 DECIMAL(8,2),
-    stk_153 DECIMAL(8,2),
-    stk_154 DECIMAL(8,2),
-    stk_155 DECIMAL(8,2),
-    stk_156 DECIMAL(8,2),
-    stk_157 DECIMAL(8,2),
-    stk_158 DECIMAL(8,2),
-    stk_159 DECIMAL(8,2),
-    stk_160 DECIMAL(8,2),
-    stk_161 DECIMAL(8,2),
-    stk_162 DECIMAL(8,2),
-    stk_163 DECIMAL(8,2),
-    stk_164 DECIMAL(8,2),
-    stk_165 DECIMAL(8,2),
-    stk_166 DECIMAL(8,2),
-    stk_167 DECIMAL(8,2),
-    stk_168 DECIMAL(8,2),
-    stk_169 DECIMAL(8,2),
-    stk_170 DECIMAL(8,2),
-    stk_171 DECIMAL(8,2),
-    stk_172 DECIMAL(8,2),
-    stk_173 DECIMAL(8,2),
-    stk_174 DECIMAL(8,2),
-    stk_175 DECIMAL(8,2),
-    stk_176 DECIMAL(8,2),
-    stk_177 DECIMAL(8,2),
-    stk_178 DECIMAL(8,2),
-    stk_179 DECIMAL(8,2),
-    stk_180 DECIMAL(8,2),
-    stk_181 DECIMAL(8,2),
-    stk_182 DECIMAL(8,2),
-    stk_183 DECIMAL(8,2),
-    stk_184 DECIMAL(8,2),
-    stk_185 DECIMAL(8,2),
-    stk_186 DECIMAL(8,2),
-    stk_187 DECIMAL(8,2),
-    stk_188 DECIMAL(8,2),
-    stk_189 DECIMAL(8,2),
-    stk_190 DECIMAL(8,2),
-    stk_191 DECIMAL(8,2),
-    stk_192 DECIMAL(8,2),
-    stk_193 DECIMAL(8,2),
-    stk_194 DECIMAL(8,2),
-    stk_195 DECIMAL(8,2),
-    stk_196 DECIMAL(8,2),
-    stk_197 DECIMAL(8,2),
-    stk_198 DECIMAL(8,2),
-    stk_199 DECIMAL(8,2),
-    stk_200 DECIMAL(8,2)
+    stk_id VARCHAR(7),
+    gain DECIMAL(8,2)
 );
 
--- Couldn't get a CTE to work here for some reason
-INSERT INTO GAINS (date,stk_001,stk_002,stk_003,stk_004,stk_005,stk_006,stk_007,stk_008,stk_009,stk_010,stk_011,stk_012,stk_013,stk_014,stk_015,stk_016,stk_017,stk_018,stk_019,stk_020,stk_021,stk_022,stk_023,stk_024,stk_025,stk_026,stk_027,stk_028,stk_029,stk_030,stk_031,stk_032,stk_033,stk_034,stk_035,stk_036,stk_037,stk_038,stk_039,stk_040,stk_041,stk_042,stk_043,stk_044,stk_045,stk_046,stk_047,stk_048,stk_049,stk_050,stk_051,stk_052,stk_053,stk_054,stk_055,stk_056,stk_057,stk_058,stk_059,stk_060,stk_061,stk_062,stk_063,stk_064,stk_065,stk_066,stk_067,stk_068,stk_069,stk_070,stk_071,stk_072,stk_073,stk_074,stk_075,stk_076,stk_077,stk_078,stk_079,stk_080,stk_081,stk_082,stk_083,stk_084,stk_085,stk_086,stk_087,stk_088,stk_089,stk_090,stk_091,stk_092,stk_093,stk_094,stk_095,stk_096,stk_097,stk_098,stk_099,stk_100,stk_101,stk_102,stk_103,stk_104,stk_105,stk_106,stk_107,stk_108,stk_109,stk_110,stk_111,stk_112,stk_113,stk_114,stk_115,stk_116,stk_117,stk_118,stk_119,stk_120,stk_121,stk_122,stk_123,stk_124,stk_125,stk_126,stk_127,stk_128,stk_129,stk_130,stk_131,stk_132,stk_133,stk_134,stk_135,stk_136,stk_137,stk_138,stk_139,stk_140,stk_141,stk_142,stk_143,stk_144,stk_145,stk_146,stk_147,stk_148,stk_149,stk_150,stk_151,stk_152,stk_153,stk_154,stk_155,stk_156,stk_157,stk_158,stk_159,stk_160,stk_161,stk_162,stk_163,stk_164,stk_165,stk_166,stk_167,stk_168,stk_169,stk_170,stk_171,stk_172,stk_173,stk_174,stk_175,stk_176,stk_177,stk_178,stk_179,stk_180,stk_181,stk_182,stk_183,stk_184,stk_185,stk_186,stk_187,stk_188,stk_189,stk_190,stk_191,stk_192,stk_193,stk_194,stk_195,stk_196,stk_197,stk_198,stk_199,stk_200)
-SELECT 
-    p.date as date,
-    (p.stk_001 - (SELECT stk_001 FROM PRICE LIMIT 1)) / (SELECT stk_001 FROM PRICE LIMIT 1) as stk_001,
-    (p.stk_002 - (SELECT stk_002 FROM PRICE LIMIT 1)) / (SELECT stk_002 FROM PRICE LIMIT 1) as stk_002,
-    (p.stk_003 - (SELECT stk_003 FROM PRICE LIMIT 1)) / (SELECT stk_003 FROM PRICE LIMIT 1) as stk_003,
-    (p.stk_004 - (SELECT stk_004 FROM PRICE LIMIT 1)) / (SELECT stk_004 FROM PRICE LIMIT 1) as stk_004,
-    (p.stk_005 - (SELECT stk_005 FROM PRICE LIMIT 1)) / (SELECT stk_005 FROM PRICE LIMIT 1) as stk_005,
-    (p.stk_006 - (SELECT stk_006 FROM PRICE LIMIT 1)) / (SELECT stk_006 FROM PRICE LIMIT 1) as stk_006,
-    (p.stk_007 - (SELECT stk_007 FROM PRICE LIMIT 1)) / (SELECT stk_007 FROM PRICE LIMIT 1) as stk_007,
-    (p.stk_008 - (SELECT stk_008 FROM PRICE LIMIT 1)) / (SELECT stk_008 FROM PRICE LIMIT 1) as stk_008,
-    (p.stk_009 - (SELECT stk_009 FROM PRICE LIMIT 1)) / (SELECT stk_009 FROM PRICE LIMIT 1) as stk_009,
-    (p.stk_010 - (SELECT stk_010 FROM PRICE LIMIT 1)) / (SELECT stk_010 FROM PRICE LIMIT 1) as stk_010,
-    (p.stk_011 - (SELECT stk_011 FROM PRICE LIMIT 1)) / (SELECT stk_011 FROM PRICE LIMIT 1) as stk_011,
-    (p.stk_012 - (SELECT stk_012 FROM PRICE LIMIT 1)) / (SELECT stk_012 FROM PRICE LIMIT 1) as stk_012,
-    (p.stk_013 - (SELECT stk_013 FROM PRICE LIMIT 1)) / (SELECT stk_013 FROM PRICE LIMIT 1) as stk_013,
-    (p.stk_014 - (SELECT stk_014 FROM PRICE LIMIT 1)) / (SELECT stk_014 FROM PRICE LIMIT 1) as stk_014,
-    (p.stk_015 - (SELECT stk_015 FROM PRICE LIMIT 1)) / (SELECT stk_015 FROM PRICE LIMIT 1) as stk_015,
-    (p.stk_016 - (SELECT stk_016 FROM PRICE LIMIT 1)) / (SELECT stk_016 FROM PRICE LIMIT 1) as stk_016,
-    (p.stk_017 - (SELECT stk_017 FROM PRICE LIMIT 1)) / (SELECT stk_017 FROM PRICE LIMIT 1) as stk_017,
-    (p.stk_018 - (SELECT stk_018 FROM PRICE LIMIT 1)) / (SELECT stk_018 FROM PRICE LIMIT 1) as stk_018,
-    (p.stk_019 - (SELECT stk_019 FROM PRICE LIMIT 1)) / (SELECT stk_019 FROM PRICE LIMIT 1) as stk_019,
-    (p.stk_020 - (SELECT stk_020 FROM PRICE LIMIT 1)) / (SELECT stk_020 FROM PRICE LIMIT 1) as stk_020,
-    (p.stk_021 - (SELECT stk_021 FROM PRICE LIMIT 1)) / (SELECT stk_021 FROM PRICE LIMIT 1) as stk_021,
-    (p.stk_022 - (SELECT stk_022 FROM PRICE LIMIT 1)) / (SELECT stk_022 FROM PRICE LIMIT 1) as stk_022,
-    (p.stk_023 - (SELECT stk_023 FROM PRICE LIMIT 1)) / (SELECT stk_023 FROM PRICE LIMIT 1) as stk_023,
-    (p.stk_024 - (SELECT stk_024 FROM PRICE LIMIT 1)) / (SELECT stk_024 FROM PRICE LIMIT 1) as stk_024,
-    (p.stk_025 - (SELECT stk_025 FROM PRICE LIMIT 1)) / (SELECT stk_025 FROM PRICE LIMIT 1) as stk_025,
-    (p.stk_026 - (SELECT stk_026 FROM PRICE LIMIT 1)) / (SELECT stk_026 FROM PRICE LIMIT 1) as stk_026,
-    (p.stk_027 - (SELECT stk_027 FROM PRICE LIMIT 1)) / (SELECT stk_027 FROM PRICE LIMIT 1) as stk_027,
-    (p.stk_028 - (SELECT stk_028 FROM PRICE LIMIT 1)) / (SELECT stk_028 FROM PRICE LIMIT 1) as stk_028,
-    (p.stk_029 - (SELECT stk_029 FROM PRICE LIMIT 1)) / (SELECT stk_029 FROM PRICE LIMIT 1) as stk_029,
-    (p.stk_030 - (SELECT stk_030 FROM PRICE LIMIT 1)) / (SELECT stk_030 FROM PRICE LIMIT 1) as stk_030,
-    (p.stk_031 - (SELECT stk_031 FROM PRICE LIMIT 1)) / (SELECT stk_031 FROM PRICE LIMIT 1) as stk_031,
-    (p.stk_032 - (SELECT stk_032 FROM PRICE LIMIT 1)) / (SELECT stk_032 FROM PRICE LIMIT 1) as stk_032,
-    (p.stk_033 - (SELECT stk_033 FROM PRICE LIMIT 1)) / (SELECT stk_033 FROM PRICE LIMIT 1) as stk_033,
-    (p.stk_034 - (SELECT stk_034 FROM PRICE LIMIT 1)) / (SELECT stk_034 FROM PRICE LIMIT 1) as stk_034,
-    (p.stk_035 - (SELECT stk_035 FROM PRICE LIMIT 1)) / (SELECT stk_035 FROM PRICE LIMIT 1) as stk_035,
-    (p.stk_036 - (SELECT stk_036 FROM PRICE LIMIT 1)) / (SELECT stk_036 FROM PRICE LIMIT 1) as stk_036,
-    (p.stk_037 - (SELECT stk_037 FROM PRICE LIMIT 1)) / (SELECT stk_037 FROM PRICE LIMIT 1) as stk_037,
-    (p.stk_038 - (SELECT stk_038 FROM PRICE LIMIT 1)) / (SELECT stk_038 FROM PRICE LIMIT 1) as stk_038,
-    (p.stk_039 - (SELECT stk_039 FROM PRICE LIMIT 1)) / (SELECT stk_039 FROM PRICE LIMIT 1) as stk_039,
-    (p.stk_040 - (SELECT stk_040 FROM PRICE LIMIT 1)) / (SELECT stk_040 FROM PRICE LIMIT 1) as stk_040,
-    (p.stk_041 - (SELECT stk_041 FROM PRICE LIMIT 1)) / (SELECT stk_041 FROM PRICE LIMIT 1) as stk_041,
-    (p.stk_042 - (SELECT stk_042 FROM PRICE LIMIT 1)) / (SELECT stk_042 FROM PRICE LIMIT 1) as stk_042,
-    (p.stk_043 - (SELECT stk_043 FROM PRICE LIMIT 1)) / (SELECT stk_043 FROM PRICE LIMIT 1) as stk_043,
-    (p.stk_044 - (SELECT stk_044 FROM PRICE LIMIT 1)) / (SELECT stk_044 FROM PRICE LIMIT 1) as stk_044,
-    (p.stk_045 - (SELECT stk_045 FROM PRICE LIMIT 1)) / (SELECT stk_045 FROM PRICE LIMIT 1) as stk_045,
-    (p.stk_046 - (SELECT stk_046 FROM PRICE LIMIT 1)) / (SELECT stk_046 FROM PRICE LIMIT 1) as stk_046,
-    (p.stk_047 - (SELECT stk_047 FROM PRICE LIMIT 1)) / (SELECT stk_047 FROM PRICE LIMIT 1) as stk_047,
-    (p.stk_048 - (SELECT stk_048 FROM PRICE LIMIT 1)) / (SELECT stk_048 FROM PRICE LIMIT 1) as stk_048,
-    (p.stk_049 - (SELECT stk_049 FROM PRICE LIMIT 1)) / (SELECT stk_049 FROM PRICE LIMIT 1) as stk_049,
-    (p.stk_050 - (SELECT stk_050 FROM PRICE LIMIT 1)) / (SELECT stk_050 FROM PRICE LIMIT 1) as stk_050,
-    (p.stk_051 - (SELECT stk_051 FROM PRICE LIMIT 1)) / (SELECT stk_051 FROM PRICE LIMIT 1) as stk_051,
-    (p.stk_052 - (SELECT stk_052 FROM PRICE LIMIT 1)) / (SELECT stk_052 FROM PRICE LIMIT 1) as stk_052,
-    (p.stk_053 - (SELECT stk_053 FROM PRICE LIMIT 1)) / (SELECT stk_053 FROM PRICE LIMIT 1) as stk_053,
-    (p.stk_054 - (SELECT stk_054 FROM PRICE LIMIT 1)) / (SELECT stk_054 FROM PRICE LIMIT 1) as stk_054,
-    (p.stk_055 - (SELECT stk_055 FROM PRICE LIMIT 1)) / (SELECT stk_055 FROM PRICE LIMIT 1) as stk_055,
-    (p.stk_056 - (SELECT stk_056 FROM PRICE LIMIT 1)) / (SELECT stk_056 FROM PRICE LIMIT 1) as stk_056,
-    (p.stk_057 - (SELECT stk_057 FROM PRICE LIMIT 1)) / (SELECT stk_057 FROM PRICE LIMIT 1) as stk_057,
-    (p.stk_058 - (SELECT stk_058 FROM PRICE LIMIT 1)) / (SELECT stk_058 FROM PRICE LIMIT 1) as stk_058,
-    (p.stk_059 - (SELECT stk_059 FROM PRICE LIMIT 1)) / (SELECT stk_059 FROM PRICE LIMIT 1) as stk_059,
-    (p.stk_060 - (SELECT stk_060 FROM PRICE LIMIT 1)) / (SELECT stk_060 FROM PRICE LIMIT 1) as stk_060,
-    (p.stk_061 - (SELECT stk_061 FROM PRICE LIMIT 1)) / (SELECT stk_061 FROM PRICE LIMIT 1) as stk_061,
-    (p.stk_062 - (SELECT stk_062 FROM PRICE LIMIT 1)) / (SELECT stk_062 FROM PRICE LIMIT 1) as stk_062,
-    (p.stk_063 - (SELECT stk_063 FROM PRICE LIMIT 1)) / (SELECT stk_063 FROM PRICE LIMIT 1) as stk_063,
-    (p.stk_064 - (SELECT stk_064 FROM PRICE LIMIT 1)) / (SELECT stk_064 FROM PRICE LIMIT 1) as stk_064,
-    (p.stk_065 - (SELECT stk_065 FROM PRICE LIMIT 1)) / (SELECT stk_065 FROM PRICE LIMIT 1) as stk_065,
-    (p.stk_066 - (SELECT stk_066 FROM PRICE LIMIT 1)) / (SELECT stk_066 FROM PRICE LIMIT 1) as stk_066,
-    (p.stk_067 - (SELECT stk_067 FROM PRICE LIMIT 1)) / (SELECT stk_067 FROM PRICE LIMIT 1) as stk_067,
-    (p.stk_068 - (SELECT stk_068 FROM PRICE LIMIT 1)) / (SELECT stk_068 FROM PRICE LIMIT 1) as stk_068,
-    (p.stk_069 - (SELECT stk_069 FROM PRICE LIMIT 1)) / (SELECT stk_069 FROM PRICE LIMIT 1) as stk_069,
-    (p.stk_070 - (SELECT stk_070 FROM PRICE LIMIT 1)) / (SELECT stk_070 FROM PRICE LIMIT 1) as stk_070,
-    (p.stk_071 - (SELECT stk_071 FROM PRICE LIMIT 1)) / (SELECT stk_071 FROM PRICE LIMIT 1) as stk_071,
-    (p.stk_072 - (SELECT stk_072 FROM PRICE LIMIT 1)) / (SELECT stk_072 FROM PRICE LIMIT 1) as stk_072,
-    (p.stk_073 - (SELECT stk_073 FROM PRICE LIMIT 1)) / (SELECT stk_073 FROM PRICE LIMIT 1) as stk_073,
-    (p.stk_074 - (SELECT stk_074 FROM PRICE LIMIT 1)) / (SELECT stk_074 FROM PRICE LIMIT 1) as stk_074,
-    (p.stk_075 - (SELECT stk_075 FROM PRICE LIMIT 1)) / (SELECT stk_075 FROM PRICE LIMIT 1) as stk_075,
-    (p.stk_076 - (SELECT stk_076 FROM PRICE LIMIT 1)) / (SELECT stk_076 FROM PRICE LIMIT 1) as stk_076,
-    (p.stk_077 - (SELECT stk_077 FROM PRICE LIMIT 1)) / (SELECT stk_077 FROM PRICE LIMIT 1) as stk_077,
-    (p.stk_078 - (SELECT stk_078 FROM PRICE LIMIT 1)) / (SELECT stk_078 FROM PRICE LIMIT 1) as stk_078,
-    (p.stk_079 - (SELECT stk_079 FROM PRICE LIMIT 1)) / (SELECT stk_079 FROM PRICE LIMIT 1) as stk_079,
-    (p.stk_080 - (SELECT stk_080 FROM PRICE LIMIT 1)) / (SELECT stk_080 FROM PRICE LIMIT 1) as stk_080,
-    (p.stk_081 - (SELECT stk_081 FROM PRICE LIMIT 1)) / (SELECT stk_081 FROM PRICE LIMIT 1) as stk_081,
-    (p.stk_082 - (SELECT stk_082 FROM PRICE LIMIT 1)) / (SELECT stk_082 FROM PRICE LIMIT 1) as stk_082,
-    (p.stk_083 - (SELECT stk_083 FROM PRICE LIMIT 1)) / (SELECT stk_083 FROM PRICE LIMIT 1) as stk_083,
-    (p.stk_084 - (SELECT stk_084 FROM PRICE LIMIT 1)) / (SELECT stk_084 FROM PRICE LIMIT 1) as stk_084,
-    (p.stk_085 - (SELECT stk_085 FROM PRICE LIMIT 1)) / (SELECT stk_085 FROM PRICE LIMIT 1) as stk_085,
-    (p.stk_086 - (SELECT stk_086 FROM PRICE LIMIT 1)) / (SELECT stk_086 FROM PRICE LIMIT 1) as stk_086,
-    (p.stk_087 - (SELECT stk_087 FROM PRICE LIMIT 1)) / (SELECT stk_087 FROM PRICE LIMIT 1) as stk_087,
-    (p.stk_088 - (SELECT stk_088 FROM PRICE LIMIT 1)) / (SELECT stk_088 FROM PRICE LIMIT 1) as stk_088,
-    (p.stk_089 - (SELECT stk_089 FROM PRICE LIMIT 1)) / (SELECT stk_089 FROM PRICE LIMIT 1) as stk_089,
-    (p.stk_090 - (SELECT stk_090 FROM PRICE LIMIT 1)) / (SELECT stk_090 FROM PRICE LIMIT 1) as stk_090,
-    (p.stk_091 - (SELECT stk_091 FROM PRICE LIMIT 1)) / (SELECT stk_091 FROM PRICE LIMIT 1) as stk_091,
-    (p.stk_092 - (SELECT stk_092 FROM PRICE LIMIT 1)) / (SELECT stk_092 FROM PRICE LIMIT 1) as stk_092,
-    (p.stk_093 - (SELECT stk_093 FROM PRICE LIMIT 1)) / (SELECT stk_093 FROM PRICE LIMIT 1) as stk_093,
-    (p.stk_094 - (SELECT stk_094 FROM PRICE LIMIT 1)) / (SELECT stk_094 FROM PRICE LIMIT 1) as stk_094,
-    (p.stk_095 - (SELECT stk_095 FROM PRICE LIMIT 1)) / (SELECT stk_095 FROM PRICE LIMIT 1) as stk_095,
-    (p.stk_096 - (SELECT stk_096 FROM PRICE LIMIT 1)) / (SELECT stk_096 FROM PRICE LIMIT 1) as stk_096,
-    (p.stk_097 - (SELECT stk_097 FROM PRICE LIMIT 1)) / (SELECT stk_097 FROM PRICE LIMIT 1) as stk_097,
-    (p.stk_098 - (SELECT stk_098 FROM PRICE LIMIT 1)) / (SELECT stk_098 FROM PRICE LIMIT 1) as stk_098,
-    (p.stk_099 - (SELECT stk_099 FROM PRICE LIMIT 1)) / (SELECT stk_099 FROM PRICE LIMIT 1) as stk_099,
-    (p.stk_100 - (SELECT stk_100 FROM PRICE LIMIT 1)) / (SELECT stk_100 FROM PRICE LIMIT 1) as stk_100,
-    (p.stk_101 - (SELECT stk_101 FROM PRICE LIMIT 1)) / (SELECT stk_101 FROM PRICE LIMIT 1) as stk_101,
-    (p.stk_102 - (SELECT stk_102 FROM PRICE LIMIT 1)) / (SELECT stk_102 FROM PRICE LIMIT 1) as stk_102,
-    (p.stk_103 - (SELECT stk_103 FROM PRICE LIMIT 1)) / (SELECT stk_103 FROM PRICE LIMIT 1) as stk_103,
-    (p.stk_104 - (SELECT stk_104 FROM PRICE LIMIT 1)) / (SELECT stk_104 FROM PRICE LIMIT 1) as stk_104,
-    (p.stk_105 - (SELECT stk_105 FROM PRICE LIMIT 1)) / (SELECT stk_105 FROM PRICE LIMIT 1) as stk_105,
-    (p.stk_106 - (SELECT stk_106 FROM PRICE LIMIT 1)) / (SELECT stk_106 FROM PRICE LIMIT 1) as stk_106,
-    (p.stk_107 - (SELECT stk_107 FROM PRICE LIMIT 1)) / (SELECT stk_107 FROM PRICE LIMIT 1) as stk_107,
-    (p.stk_108 - (SELECT stk_108 FROM PRICE LIMIT 1)) / (SELECT stk_108 FROM PRICE LIMIT 1) as stk_108,
-    (p.stk_109 - (SELECT stk_109 FROM PRICE LIMIT 1)) / (SELECT stk_109 FROM PRICE LIMIT 1) as stk_109,
-    (p.stk_110 - (SELECT stk_110 FROM PRICE LIMIT 1)) / (SELECT stk_110 FROM PRICE LIMIT 1) as stk_110,
-    (p.stk_111 - (SELECT stk_111 FROM PRICE LIMIT 1)) / (SELECT stk_111 FROM PRICE LIMIT 1) as stk_111,
-    (p.stk_112 - (SELECT stk_112 FROM PRICE LIMIT 1)) / (SELECT stk_112 FROM PRICE LIMIT 1) as stk_112,
-    (p.stk_113 - (SELECT stk_113 FROM PRICE LIMIT 1)) / (SELECT stk_113 FROM PRICE LIMIT 1) as stk_113,
-    (p.stk_114 - (SELECT stk_114 FROM PRICE LIMIT 1)) / (SELECT stk_114 FROM PRICE LIMIT 1) as stk_114,
-    (p.stk_115 - (SELECT stk_115 FROM PRICE LIMIT 1)) / (SELECT stk_115 FROM PRICE LIMIT 1) as stk_115,
-    (p.stk_116 - (SELECT stk_116 FROM PRICE LIMIT 1)) / (SELECT stk_116 FROM PRICE LIMIT 1) as stk_116,
-    (p.stk_117 - (SELECT stk_117 FROM PRICE LIMIT 1)) / (SELECT stk_117 FROM PRICE LIMIT 1) as stk_117,
-    (p.stk_118 - (SELECT stk_118 FROM PRICE LIMIT 1)) / (SELECT stk_118 FROM PRICE LIMIT 1) as stk_118,
-    (p.stk_119 - (SELECT stk_119 FROM PRICE LIMIT 1)) / (SELECT stk_119 FROM PRICE LIMIT 1) as stk_119,
-    (p.stk_120 - (SELECT stk_120 FROM PRICE LIMIT 1)) / (SELECT stk_120 FROM PRICE LIMIT 1) as stk_120,
-    (p.stk_121 - (SELECT stk_121 FROM PRICE LIMIT 1)) / (SELECT stk_121 FROM PRICE LIMIT 1) as stk_121,
-    (p.stk_122 - (SELECT stk_122 FROM PRICE LIMIT 1)) / (SELECT stk_122 FROM PRICE LIMIT 1) as stk_122,
-    (p.stk_123 - (SELECT stk_123 FROM PRICE LIMIT 1)) / (SELECT stk_123 FROM PRICE LIMIT 1) as stk_123,
-    (p.stk_124 - (SELECT stk_124 FROM PRICE LIMIT 1)) / (SELECT stk_124 FROM PRICE LIMIT 1) as stk_124,
-    (p.stk_125 - (SELECT stk_125 FROM PRICE LIMIT 1)) / (SELECT stk_125 FROM PRICE LIMIT 1) as stk_125,
-    (p.stk_126 - (SELECT stk_126 FROM PRICE LIMIT 1)) / (SELECT stk_126 FROM PRICE LIMIT 1) as stk_126,
-    (p.stk_127 - (SELECT stk_127 FROM PRICE LIMIT 1)) / (SELECT stk_127 FROM PRICE LIMIT 1) as stk_127,
-    (p.stk_128 - (SELECT stk_128 FROM PRICE LIMIT 1)) / (SELECT stk_128 FROM PRICE LIMIT 1) as stk_128,
-    (p.stk_129 - (SELECT stk_129 FROM PRICE LIMIT 1)) / (SELECT stk_129 FROM PRICE LIMIT 1) as stk_129,
-    (p.stk_130 - (SELECT stk_130 FROM PRICE LIMIT 1)) / (SELECT stk_130 FROM PRICE LIMIT 1) as stk_130,
-    (p.stk_131 - (SELECT stk_131 FROM PRICE LIMIT 1)) / (SELECT stk_131 FROM PRICE LIMIT 1) as stk_131,
-    (p.stk_132 - (SELECT stk_132 FROM PRICE LIMIT 1)) / (SELECT stk_132 FROM PRICE LIMIT 1) as stk_132,
-    (p.stk_133 - (SELECT stk_133 FROM PRICE LIMIT 1)) / (SELECT stk_133 FROM PRICE LIMIT 1) as stk_133,
-    (p.stk_134 - (SELECT stk_134 FROM PRICE LIMIT 1)) / (SELECT stk_134 FROM PRICE LIMIT 1) as stk_134,
-    (p.stk_135 - (SELECT stk_135 FROM PRICE LIMIT 1)) / (SELECT stk_135 FROM PRICE LIMIT 1) as stk_135,
-    (p.stk_136 - (SELECT stk_136 FROM PRICE LIMIT 1)) / (SELECT stk_136 FROM PRICE LIMIT 1) as stk_136,
-    (p.stk_137 - (SELECT stk_137 FROM PRICE LIMIT 1)) / (SELECT stk_137 FROM PRICE LIMIT 1) as stk_137,
-    (p.stk_138 - (SELECT stk_138 FROM PRICE LIMIT 1)) / (SELECT stk_138 FROM PRICE LIMIT 1) as stk_138,
-    (p.stk_139 - (SELECT stk_139 FROM PRICE LIMIT 1)) / (SELECT stk_139 FROM PRICE LIMIT 1) as stk_139,
-    (p.stk_140 - (SELECT stk_140 FROM PRICE LIMIT 1)) / (SELECT stk_140 FROM PRICE LIMIT 1) as stk_140,
-    (p.stk_141 - (SELECT stk_141 FROM PRICE LIMIT 1)) / (SELECT stk_141 FROM PRICE LIMIT 1) as stk_141,
-    (p.stk_142 - (SELECT stk_142 FROM PRICE LIMIT 1)) / (SELECT stk_142 FROM PRICE LIMIT 1) as stk_142,
-    (p.stk_143 - (SELECT stk_143 FROM PRICE LIMIT 1)) / (SELECT stk_143 FROM PRICE LIMIT 1) as stk_143,
-    (p.stk_144 - (SELECT stk_144 FROM PRICE LIMIT 1)) / (SELECT stk_144 FROM PRICE LIMIT 1) as stk_144,
-    (p.stk_145 - (SELECT stk_145 FROM PRICE LIMIT 1)) / (SELECT stk_145 FROM PRICE LIMIT 1) as stk_145,
-    (p.stk_146 - (SELECT stk_146 FROM PRICE LIMIT 1)) / (SELECT stk_146 FROM PRICE LIMIT 1) as stk_146,
-    (p.stk_147 - (SELECT stk_147 FROM PRICE LIMIT 1)) / (SELECT stk_147 FROM PRICE LIMIT 1) as stk_147,
-    (p.stk_148 - (SELECT stk_148 FROM PRICE LIMIT 1)) / (SELECT stk_148 FROM PRICE LIMIT 1) as stk_148,
-    (p.stk_149 - (SELECT stk_149 FROM PRICE LIMIT 1)) / (SELECT stk_149 FROM PRICE LIMIT 1) as stk_149,
-    (p.stk_150 - (SELECT stk_150 FROM PRICE LIMIT 1)) / (SELECT stk_150 FROM PRICE LIMIT 1) as stk_150,
-    (p.stk_151 - (SELECT stk_151 FROM PRICE LIMIT 1)) / (SELECT stk_151 FROM PRICE LIMIT 1) as stk_151,
-    (p.stk_152 - (SELECT stk_152 FROM PRICE LIMIT 1)) / (SELECT stk_152 FROM PRICE LIMIT 1) as stk_152,
-    (p.stk_153 - (SELECT stk_153 FROM PRICE LIMIT 1)) / (SELECT stk_153 FROM PRICE LIMIT 1) as stk_153,
-    (p.stk_154 - (SELECT stk_154 FROM PRICE LIMIT 1)) / (SELECT stk_154 FROM PRICE LIMIT 1) as stk_154,
-    (p.stk_155 - (SELECT stk_155 FROM PRICE LIMIT 1)) / (SELECT stk_155 FROM PRICE LIMIT 1) as stk_155,
-    (p.stk_156 - (SELECT stk_156 FROM PRICE LIMIT 1)) / (SELECT stk_156 FROM PRICE LIMIT 1) as stk_156,
-    (p.stk_157 - (SELECT stk_157 FROM PRICE LIMIT 1)) / (SELECT stk_157 FROM PRICE LIMIT 1) as stk_157,
-    (p.stk_158 - (SELECT stk_158 FROM PRICE LIMIT 1)) / (SELECT stk_158 FROM PRICE LIMIT 1) as stk_158,
-    (p.stk_159 - (SELECT stk_159 FROM PRICE LIMIT 1)) / (SELECT stk_159 FROM PRICE LIMIT 1) as stk_159,
-    (p.stk_160 - (SELECT stk_160 FROM PRICE LIMIT 1)) / (SELECT stk_160 FROM PRICE LIMIT 1) as stk_160,
-    (p.stk_161 - (SELECT stk_161 FROM PRICE LIMIT 1)) / (SELECT stk_161 FROM PRICE LIMIT 1) as stk_161,
-    (p.stk_162 - (SELECT stk_162 FROM PRICE LIMIT 1)) / (SELECT stk_162 FROM PRICE LIMIT 1) as stk_162,
-    (p.stk_163 - (SELECT stk_163 FROM PRICE LIMIT 1)) / (SELECT stk_163 FROM PRICE LIMIT 1) as stk_163,
-    (p.stk_164 - (SELECT stk_164 FROM PRICE LIMIT 1)) / (SELECT stk_164 FROM PRICE LIMIT 1) as stk_164,
-    (p.stk_165 - (SELECT stk_165 FROM PRICE LIMIT 1)) / (SELECT stk_165 FROM PRICE LIMIT 1) as stk_165,
-    (p.stk_166 - (SELECT stk_166 FROM PRICE LIMIT 1)) / (SELECT stk_166 FROM PRICE LIMIT 1) as stk_166,
-    (p.stk_167 - (SELECT stk_167 FROM PRICE LIMIT 1)) / (SELECT stk_167 FROM PRICE LIMIT 1) as stk_167,
-    (p.stk_168 - (SELECT stk_168 FROM PRICE LIMIT 1)) / (SELECT stk_168 FROM PRICE LIMIT 1) as stk_168,
-    (p.stk_169 - (SELECT stk_169 FROM PRICE LIMIT 1)) / (SELECT stk_169 FROM PRICE LIMIT 1) as stk_169,
-    (p.stk_170 - (SELECT stk_170 FROM PRICE LIMIT 1)) / (SELECT stk_170 FROM PRICE LIMIT 1) as stk_170,
-    (p.stk_171 - (SELECT stk_171 FROM PRICE LIMIT 1)) / (SELECT stk_171 FROM PRICE LIMIT 1) as stk_171,
-    (p.stk_172 - (SELECT stk_172 FROM PRICE LIMIT 1)) / (SELECT stk_172 FROM PRICE LIMIT 1) as stk_172,
-    (p.stk_173 - (SELECT stk_173 FROM PRICE LIMIT 1)) / (SELECT stk_173 FROM PRICE LIMIT 1) as stk_173,
-    (p.stk_174 - (SELECT stk_174 FROM PRICE LIMIT 1)) / (SELECT stk_174 FROM PRICE LIMIT 1) as stk_174,
-    (p.stk_175 - (SELECT stk_175 FROM PRICE LIMIT 1)) / (SELECT stk_175 FROM PRICE LIMIT 1) as stk_175,
-    (p.stk_176 - (SELECT stk_176 FROM PRICE LIMIT 1)) / (SELECT stk_176 FROM PRICE LIMIT 1) as stk_176,
-    (p.stk_177 - (SELECT stk_177 FROM PRICE LIMIT 1)) / (SELECT stk_177 FROM PRICE LIMIT 1) as stk_177,
-    (p.stk_178 - (SELECT stk_178 FROM PRICE LIMIT 1)) / (SELECT stk_178 FROM PRICE LIMIT 1) as stk_178,
-    (p.stk_179 - (SELECT stk_179 FROM PRICE LIMIT 1)) / (SELECT stk_179 FROM PRICE LIMIT 1) as stk_179,
-    (p.stk_180 - (SELECT stk_180 FROM PRICE LIMIT 1)) / (SELECT stk_180 FROM PRICE LIMIT 1) as stk_180,
-    (p.stk_181 - (SELECT stk_181 FROM PRICE LIMIT 1)) / (SELECT stk_181 FROM PRICE LIMIT 1) as stk_181,
-    (p.stk_182 - (SELECT stk_182 FROM PRICE LIMIT 1)) / (SELECT stk_182 FROM PRICE LIMIT 1) as stk_182,
-    (p.stk_183 - (SELECT stk_183 FROM PRICE LIMIT 1)) / (SELECT stk_183 FROM PRICE LIMIT 1) as stk_183,
-    (p.stk_184 - (SELECT stk_184 FROM PRICE LIMIT 1)) / (SELECT stk_184 FROM PRICE LIMIT 1) as stk_184,
-    (p.stk_185 - (SELECT stk_185 FROM PRICE LIMIT 1)) / (SELECT stk_185 FROM PRICE LIMIT 1) as stk_185,
-    (p.stk_186 - (SELECT stk_186 FROM PRICE LIMIT 1)) / (SELECT stk_186 FROM PRICE LIMIT 1) as stk_186,
-    (p.stk_187 - (SELECT stk_187 FROM PRICE LIMIT 1)) / (SELECT stk_187 FROM PRICE LIMIT 1) as stk_187,
-    (p.stk_188 - (SELECT stk_188 FROM PRICE LIMIT 1)) / (SELECT stk_188 FROM PRICE LIMIT 1) as stk_188,
-    (p.stk_189 - (SELECT stk_189 FROM PRICE LIMIT 1)) / (SELECT stk_189 FROM PRICE LIMIT 1) as stk_189,
-    (p.stk_190 - (SELECT stk_190 FROM PRICE LIMIT 1)) / (SELECT stk_190 FROM PRICE LIMIT 1) as stk_190,
-    (p.stk_191 - (SELECT stk_191 FROM PRICE LIMIT 1)) / (SELECT stk_191 FROM PRICE LIMIT 1) as stk_191,
-    (p.stk_192 - (SELECT stk_192 FROM PRICE LIMIT 1)) / (SELECT stk_192 FROM PRICE LIMIT 1) as stk_192,
-    (p.stk_193 - (SELECT stk_193 FROM PRICE LIMIT 1)) / (SELECT stk_193 FROM PRICE LIMIT 1) as stk_193,
-    (p.stk_194 - (SELECT stk_194 FROM PRICE LIMIT 1)) / (SELECT stk_194 FROM PRICE LIMIT 1) as stk_194,
-    (p.stk_195 - (SELECT stk_195 FROM PRICE LIMIT 1)) / (SELECT stk_195 FROM PRICE LIMIT 1) as stk_195,
-    (p.stk_196 - (SELECT stk_196 FROM PRICE LIMIT 1)) / (SELECT stk_196 FROM PRICE LIMIT 1) as stk_196,
-    (p.stk_197 - (SELECT stk_197 FROM PRICE LIMIT 1)) / (SELECT stk_197 FROM PRICE LIMIT 1) as stk_197,
-    (p.stk_198 - (SELECT stk_198 FROM PRICE LIMIT 1)) / (SELECT stk_198 FROM PRICE LIMIT 1) as stk_198,
-    (p.stk_199 - (SELECT stk_199 FROM PRICE LIMIT 1)) / (SELECT stk_199 FROM PRICE LIMIT 1) as stk_199,
-    (p.stk_200 - (SELECT stk_200 FROM PRICE LIMIT 1)) / (SELECT stk_200 FROM PRICE LIMIT 1) as stk_200
-FROM PRICE p;
+SELECT stk_001 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_001 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_001', @gain);
+SELECT stk_002 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_002 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_002', @gain);
+SELECT stk_003 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_003 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_003', @gain);
+SELECT stk_004 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_004 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_004', @gain);
+SELECT stk_005 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_005 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_005', @gain);
+SELECT stk_006 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_006 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_006', @gain);
+SELECT stk_007 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_007 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_007', @gain);
+SELECT stk_008 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_008 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_008', @gain);
+SELECT stk_009 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_009 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_009', @gain);
+SELECT stk_010 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_010 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_010', @gain);
+SELECT stk_011 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_011 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_011', @gain);
+SELECT stk_012 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_012 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_012', @gain);
+SELECT stk_013 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_013 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_013', @gain);
+SELECT stk_014 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_014 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_014', @gain);
+SELECT stk_015 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_015 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_015', @gain);
+SELECT stk_016 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_016 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_016', @gain);
+SELECT stk_017 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_017 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_017', @gain);
+SELECT stk_018 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_018 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_018', @gain);
+SELECT stk_019 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_019 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_019', @gain);
+SELECT stk_020 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_020 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_020', @gain);
+SELECT stk_021 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_021 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_021', @gain);
+SELECT stk_022 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_022 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_022', @gain);
+SELECT stk_023 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_023 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_023', @gain);
+SELECT stk_024 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_024 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_024', @gain);
+SELECT stk_025 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_025 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_025', @gain);
+SELECT stk_026 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_026 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_026', @gain);
+SELECT stk_027 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_027 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_027', @gain);
+SELECT stk_028 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_028 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_028', @gain);
+SELECT stk_029 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_029 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_029', @gain);
+SELECT stk_030 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_030 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_030', @gain);
+SELECT stk_031 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_031 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_031', @gain);
+SELECT stk_032 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_032 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_032', @gain);
+SELECT stk_033 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_033 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_033', @gain);
+SELECT stk_034 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_034 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_034', @gain);
+SELECT stk_035 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_035 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_035', @gain);
+SELECT stk_036 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_036 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_036', @gain);
+SELECT stk_037 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_037 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_037', @gain);
+SELECT stk_038 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_038 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_038', @gain);
+SELECT stk_039 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_039 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_039', @gain);
+SELECT stk_040 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_040 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_040', @gain);
+SELECT stk_041 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_041 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_041', @gain);
+SELECT stk_042 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_042 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_042', @gain);
+SELECT stk_043 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_043 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_043', @gain);
+SELECT stk_044 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_044 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_044', @gain);
+SELECT stk_045 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_045 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_045', @gain);
+SELECT stk_046 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_046 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_046', @gain);
+SELECT stk_047 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_047 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_047', @gain);
+SELECT stk_048 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_048 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_048', @gain);
+SELECT stk_049 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_049 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_049', @gain);
+SELECT stk_050 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_050 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_050', @gain);
+SELECT stk_051 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_051 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_051', @gain);
+SELECT stk_052 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_052 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_052', @gain);
+SELECT stk_053 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_053 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_053', @gain);
+SELECT stk_054 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_054 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_054', @gain);
+SELECT stk_055 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_055 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_055', @gain);
+SELECT stk_056 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_056 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_056', @gain);
+SELECT stk_057 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_057 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_057', @gain);
+SELECT stk_058 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_058 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_058', @gain);
+SELECT stk_059 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_059 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_059', @gain);
+SELECT stk_060 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_060 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_060', @gain);
+SELECT stk_061 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_061 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_061', @gain);
+SELECT stk_062 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_062 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_062', @gain);
+SELECT stk_063 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_063 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_063', @gain);
+SELECT stk_064 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_064 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_064', @gain);
+SELECT stk_065 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_065 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_065', @gain);
+SELECT stk_066 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_066 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_066', @gain);
+SELECT stk_067 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_067 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_067', @gain);
+SELECT stk_068 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_068 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_068', @gain);
+SELECT stk_069 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_069 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_069', @gain);
+SELECT stk_070 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_070 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_070', @gain);
+SELECT stk_071 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_071 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_071', @gain);
+SELECT stk_072 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_072 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_072', @gain);
+SELECT stk_073 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_073 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_073', @gain);
+SELECT stk_074 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_074 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_074', @gain);
+SELECT stk_075 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_075 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_075', @gain);
+SELECT stk_076 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_076 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_076', @gain);
+SELECT stk_077 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_077 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_077', @gain);
+SELECT stk_078 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_078 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_078', @gain);
+SELECT stk_079 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_079 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_079', @gain);
+SELECT stk_080 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_080 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_080', @gain);
+SELECT stk_081 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_081 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_081', @gain);
+SELECT stk_082 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_082 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_082', @gain);
+SELECT stk_083 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_083 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_083', @gain);
+SELECT stk_084 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_084 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_084', @gain);
+SELECT stk_085 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_085 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_085', @gain);
+SELECT stk_086 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_086 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_086', @gain);
+SELECT stk_087 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_087 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_087', @gain);
+SELECT stk_088 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_088 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_088', @gain);
+SELECT stk_089 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_089 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_089', @gain);
+SELECT stk_090 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_090 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_090', @gain);
+SELECT stk_091 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_091 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_091', @gain);
+SELECT stk_092 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_092 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_092', @gain);
+SELECT stk_093 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_093 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_093', @gain);
+SELECT stk_094 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_094 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_094', @gain);
+SELECT stk_095 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_095 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_095', @gain);
+SELECT stk_096 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_096 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_096', @gain);
+SELECT stk_097 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_097 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_097', @gain);
+SELECT stk_098 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_098 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_098', @gain);
+SELECT stk_099 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_099 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_099', @gain);
+SELECT stk_100 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_100 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_100', @gain);
+SELECT stk_101 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_101 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_101', @gain);
+SELECT stk_102 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_102 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_102', @gain);
+SELECT stk_103 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_103 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_103', @gain);
+SELECT stk_104 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_104 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_104', @gain);
+SELECT stk_105 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_105 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_105', @gain);
+SELECT stk_106 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_106 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_106', @gain);
+SELECT stk_107 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_107 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_107', @gain);
+SELECT stk_108 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_108 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_108', @gain);
+SELECT stk_109 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_109 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_109', @gain);
+SELECT stk_110 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_110 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_110', @gain);
+SELECT stk_111 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_111 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_111', @gain);
+SELECT stk_112 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_112 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_112', @gain);
+SELECT stk_113 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_113 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_113', @gain);
+SELECT stk_114 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_114 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_114', @gain);
+SELECT stk_115 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_115 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_115', @gain);
+SELECT stk_116 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_116 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_116', @gain);
+SELECT stk_117 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_117 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_117', @gain);
+SELECT stk_118 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_118 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_118', @gain);
+SELECT stk_119 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_119 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_119', @gain);
+SELECT stk_120 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_120 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_120', @gain);
+SELECT stk_121 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_121 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_121', @gain);
+SELECT stk_122 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_122 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_122', @gain);
+SELECT stk_123 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_123 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_123', @gain);
+SELECT stk_124 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_124 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_124', @gain);
+SELECT stk_125 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_125 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_125', @gain);
+SELECT stk_126 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_126 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_126', @gain);
+SELECT stk_127 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_127 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_127', @gain);
+SELECT stk_128 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_128 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_128', @gain);
+SELECT stk_129 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_129 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_129', @gain);
+SELECT stk_130 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_130 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_130', @gain);
+SELECT stk_131 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_131 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_131', @gain);
+SELECT stk_132 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_132 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_132', @gain);
+SELECT stk_133 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_133 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_133', @gain);
+SELECT stk_134 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_134 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_134', @gain);
+SELECT stk_135 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_135 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_135', @gain);
+SELECT stk_136 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_136 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_136', @gain);
+SELECT stk_137 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_137 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_137', @gain);
+SELECT stk_138 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_138 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_138', @gain);
+SELECT stk_139 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_139 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_139', @gain);
+SELECT stk_140 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_140 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_140', @gain);
+SELECT stk_141 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_141 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_141', @gain);
+SELECT stk_142 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_142 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_142', @gain);
+SELECT stk_143 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_143 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_143', @gain);
+SELECT stk_144 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_144 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_144', @gain);
+SELECT stk_145 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_145 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_145', @gain);
+SELECT stk_146 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_146 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_146', @gain);
+SELECT stk_147 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_147 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_147', @gain);
+SELECT stk_148 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_148 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_148', @gain);
+SELECT stk_149 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_149 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_149', @gain);
+SELECT stk_150 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_150 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_150', @gain);
+SELECT stk_151 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_151 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_151', @gain);
+SELECT stk_152 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_152 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_152', @gain);
+SELECT stk_153 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_153 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_153', @gain);
+SELECT stk_154 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_154 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_154', @gain);
+SELECT stk_155 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_155 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_155', @gain);
+SELECT stk_156 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_156 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_156', @gain);
+SELECT stk_157 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_157 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_157', @gain);
+SELECT stk_158 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_158 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_158', @gain);
+SELECT stk_159 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_159 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_159', @gain);
+SELECT stk_160 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_160 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_160', @gain);
+SELECT stk_161 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_161 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_161', @gain);
+SELECT stk_162 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_162 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_162', @gain);
+SELECT stk_163 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_163 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_163', @gain);
+SELECT stk_164 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_164 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_164', @gain);
+SELECT stk_165 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_165 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_165', @gain);
+SELECT stk_166 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_166 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_166', @gain);
+SELECT stk_167 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_167 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_167', @gain);
+SELECT stk_168 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_168 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_168', @gain);
+SELECT stk_169 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_169 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_169', @gain);
+SELECT stk_170 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_170 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_170', @gain);
+SELECT stk_171 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_171 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_171', @gain);
+SELECT stk_172 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_172 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_172', @gain);
+SELECT stk_173 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_173 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_173', @gain);
+SELECT stk_174 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_174 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_174', @gain);
+SELECT stk_175 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_175 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_175', @gain);
+SELECT stk_176 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_176 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_176', @gain);
+SELECT stk_177 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_177 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_177', @gain);
+SELECT stk_178 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_178 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_178', @gain);
+SELECT stk_179 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_179 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_179', @gain);
+SELECT stk_180 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_180 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_180', @gain);
+SELECT stk_181 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_181 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_181', @gain);
+SELECT stk_182 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_182 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_182', @gain);
+SELECT stk_183 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_183 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_183', @gain);
+SELECT stk_184 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_184 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_184', @gain);
+SELECT stk_185 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_185 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_185', @gain);
+SELECT stk_186 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_186 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_186', @gain);
+SELECT stk_187 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_187 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_187', @gain);
+SELECT stk_188 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_188 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_188', @gain);
+SELECT stk_189 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_189 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_189', @gain);
+SELECT stk_190 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_190 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_190', @gain);
+SELECT stk_191 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_191 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_191', @gain);
+SELECT stk_192 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_192 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_192', @gain);
+SELECT stk_193 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_193 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_193', @gain);
+SELECT stk_194 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_194 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_194', @gain);
+SELECT stk_195 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_195 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_195', @gain);
+SELECT stk_196 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_196 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_196', @gain);
+SELECT stk_197 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_197 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_197', @gain);
+SELECT stk_198 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_198 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_198', @gain);
+SELECT stk_199 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_199 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_199', @gain);
+SELECT stk_200 INTO @first_price from PRICE LIMIT 1;
+SELECT stk_200 INTO @last_price from PRICE ORDER BY date DESC LIMIT 1;
+SELECT ((@last_price - @first_price)/@first_price) INTO @gain;
+INSERT INTO GAINS (stk_id, gain) VALUES ('stk_200', @gain);
 
-
-select * from GAINS order by date desc limit 1;
+SELECT * from GAINS;
+SELECT CONCAT('Returns computed for the period ', (SELECT date FROM PRICE LIMIT 1), ' to ', (SELECT date FROM PRICE ORDER BY date desc LIMIT 1)) as 'Result:';

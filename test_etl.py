@@ -1,5 +1,5 @@
 import os
-from random import choice
+from random import choice, randint
 from runetl import runetl, reset_globals, get_csv_names, get_days_read, get_prices_read, get_volumes_read, Average
 from gencsv import gencsv
 
@@ -16,7 +16,7 @@ def setup_test():
     reset_globals()
 
 def create_rows(rows):
-    fnames = [f"D{i}.csv" for i in range(10)]
+    fnames = get_csv_names()
     with (
         open(fnames[0], "w" ) as D0, 
         open(fnames[1], "w" ) as D1, 
@@ -34,31 +34,38 @@ def create_rows(rows):
 
 def test_when_no_files():
     setup_test()
-    nrows_read = runetl()
+    nrows_read = runetl(get_csv_names())
     assert nrows_read == 0, "No data should be read."
 
 def test_read_one_row():
     setup_test()
     gencsv(nRows=1)       
-    nrows_read = runetl()
+    nrows_read = runetl(get_csv_names())
     assert nrows_read == 1, "One row was written"
 
 def test_read_seven_row():    
     setup_test()
     gencsv(nRows=7)   
-    nrows_read = runetl()
+    nrows_read = runetl(get_csv_names())
     assert nrows_read == 7, "Seven rows were written"
 
 def test_read_bilbo_row():    
     setup_test()
     gencsv(nRows=111)   
-    nrows_read = runetl()
+    nrows_read = runetl(get_csv_names())
     assert nrows_read == 111, "One hundred and eleven rows were written"
+
+def test_read_rand_row():
+    setup_test()
+    nRows=randint(0,10000)
+    gencsv(nRows)   
+    nrows_read = runetl(get_csv_names())
+    assert nrows_read == nRows, f"{nRows} rows were written"
 
 def test_data_read():
     setup_test()
     create_rows(['2001-1-1,7,0.05,100', '1999-4-01,111,3,1', '1999-4-01,111,9.0,1'])
-    nrows_read = runetl()
+    nrows_read = runetl(get_csv_names())
     assert nrows_read == 3, "Three rows were written"
     days = get_days_read()
     earliest = days[0]
