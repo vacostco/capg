@@ -1,6 +1,5 @@
 # capg
-use python to compute capital gains, see [problem-description.txt](https://github.com/vacostco/capg/blob/main/problem-description.txt)
-
+Use python to compute capital gains, see [problem-description.txt](https://github.com/vacostco/capg/blob/main/problem-description.txt)
 ## Useful scripts
 These files can serve as examples of how to run the `gencsv.py` and `runetl.py` programs
 - `generate-data.sh` Run this script to generate 10 files of trade data
