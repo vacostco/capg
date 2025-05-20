@@ -37,6 +37,12 @@ def test_when_no_files():
     nrows_read = runetl(get_csv_names())
     assert nrows_read == 0, "No data should be read."
 
+def test_read_zero_row():
+    setup_test()
+    gencsv(nRows=0)       
+    nrows_read = runetl(get_csv_names())
+    assert nrows_read == 0, "No row was written"
+
 def test_read_one_row():
     setup_test()
     gencsv(nRows=1)       
