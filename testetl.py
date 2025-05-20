@@ -1,6 +1,6 @@
 import os
 from random import choice, randint
-from runetl import runetl, reset_globals, get_csv_names, get_days_read, get_prices_read, get_volumes_read, Average
+from runetl import runetl, reset_globals, get_csv_names, get_days_read, get_prices_read, get_volumes_read, get_period_gains, Average
 from gencsv import gencsv
 
 def clear_all_files():
@@ -99,8 +99,10 @@ def test_data_read():
     assert latest == '2001-01-01', "The latest trade was in 2001"
     prices = get_prices_read()
     volume = get_volumes_read()
+    pgains = get_period_gains()
     assert prices[earliest][111].value() == 6, "The earliest price was 6"
     assert volume[earliest][111] == 2, "The earliest volume was 2"
     assert prices[latest][7].value() == 0.05, "The latest price was 0.05"
     assert volume[latest][7] == 100, "The latest volume was 100"
-
+    assert pgains[111 - 1] == 1.17, "Bilbo gain is 7"
+    assert pgains[7 - 1] == 0, "Stalker gain is 0"

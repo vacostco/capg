@@ -62,6 +62,11 @@ Captures the price of the stk_id at the begining of the period
 FIRST_PRICE = [None] * 200 
 
 """
+Captures the gain for stk_id on the last day of the period
+"""
+PERIOD_GAIN = [None] * 200 
+
+"""
 Holds the validated csv data read
 """
 class TradeData:
@@ -139,6 +144,12 @@ Useful for testing
 """
 def get_volumes_read():
     return AGGREGATED_VOLUME
+
+"""
+Useful for testing
+"""
+def get_period_gains():
+    return PERIOD_GAIN
 
 """
 Check that input files exist
@@ -259,10 +270,12 @@ def etlcsv(fpath):
     logging.debug(f"Done reading {fpath}")
 
 """
-Writes PRICE.csv a csv file, to be loaded into the DB, which is backfilled to not be sparse.  An id that is never traded will have price values of 0
-Writes GAINS.csv which holds the daily gain relative to the first day of the period
+Writes PRICE.csv a csv file, to be loaded into the DB, which is backfilled to not be sparse.  
+Writes GAINS.csv which holds the daily gain relative to the first day of the period.
+An id that is never traded will have price and gain values of 0
 """
 def write_price_and_gains_csv():
+    global PERIOD_GAIN
     logging.info(f"Writing PRICE.csv ...")
     logging.info(f"Writing GAINS.csv ...")
     gainsrow = None
@@ -296,8 +309,9 @@ def write_price_and_gains_csv():
     logging.debug(f"Done Writing PRICE.csv")
     logging.debug(f"Done Writing GAINS.csv")
     if gainsrow is not None:
+        PERIOD_GAIN = [float(gain) for gain in gainsrow[1:]]
         for id in ALLIDS:
-            logging.debug(f"Gain for stk_{id:03d} was {gainsrow[id]}")
+            logging.debug(f"Gain for stk_{id:03d} was {PERIOD_GAIN[id-1]:.2f}")
 
 """
 Writes VOLUME.csv - a csv file, to be loaded into the DB, which is backfilled to not be sparse.  The volume for an id that is not traded on a given day is 0
