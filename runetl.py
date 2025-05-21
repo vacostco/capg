@@ -269,12 +269,15 @@ def etlcsv(fpath):
 
 """
 Initializes FIRST_PRICE with the earliest trade price found for id in AGGREGATED_PRICES
+Trades at a price equal to zero are ignored
 """
 def find_first_price(stk_id):
     for day in ALL_DAYS:
         if stk_id in AGGREGATED_PRICES[day]:
-            FIRST_PRICE[stk_id-1] = AGGREGATED_PRICES[day][stk_id].value()
-            break
+            avgprice = AGGREGATED_PRICES[day][stk_id].value()
+            if avgprice > 0:
+                FIRST_PRICE[stk_id-1] = avgprice
+                break
 
 """
 Writes PRICE.csv a csv file, to be loaded into the DB, which is backfilled to not be sparse.  
