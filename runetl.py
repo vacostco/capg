@@ -284,6 +284,7 @@ def write_price_and_gains_csv():
         for id in ALLIDS:
             header += f",stk_{id:03d}"
         print(header, file=pricecsv)
+        print(header, file=gainscsv)
         # initialize the price tracker (accounts for missing data in the sparse array)
         price_tracker = FIRST_PRICE[:]
         for day in ALL_DAYS:
@@ -353,7 +354,7 @@ def runetl(csvfiles):
     else:        
         NUMCPU = min(NUMCPU, len(ALLCSV))
         logging.info(f"Using {NUMCPU} processors to extract data from {ALLCSV} ...")
-        
+
         start = time()
         with ThreadPoolExecutor(max_workers=NUMCPU) as executor:
             # Distribute the reading of CSV, one file per CPU (or thread)
