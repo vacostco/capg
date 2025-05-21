@@ -268,7 +268,7 @@ def etlcsv(fpath):
     logging.debug(f"Done reading {fpath}")
 
 """
-Initializes PRICE_TRACKER with the earliest trade price found for id in AGGREGATED_PRICES
+Initializes FIRST_PRICE with the earliest trade price found for id in AGGREGATED_PRICES
 """
 def find_first_price(stk_id):
     for day in ALL_DAYS:
