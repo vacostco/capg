@@ -149,7 +149,7 @@ def input_files_exist(csvfiles):
     ALLCSV = [fpath for fpath in csvfiles if not fpath.endswith("PRICE.csv") and not fpath.endswith("VOLUME.csv") and not fpath.endswith("GAINS.csv")]
     for fpath in ALLCSV:
         if not path.exists(fpath):
-            logging.error("No such file {fpath}")
+            logging.error(f"No such file \"{fpath}\"")
             return False    
     return len(ALLCSV) > 0
 
