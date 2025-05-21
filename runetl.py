@@ -297,15 +297,13 @@ def write_price_and_gains_csv():
         print(header, file=pricecsv)
         print(header, file=gainscsv)
         # initialize the price tracker (accounts for missing data in the sparse array)
-        price_tracker = FIRST_PRICE[:]
+        price_tracker = [p if p is not None else 0 for p in FIRST_PRICE]
         for day in ALL_DAYS:
             pricerow = [day]
             gainsrow = [day]
             for id in ALLIDS:
                 # get the current price from the tracker
                 price = price_tracker[id-1]
-                # if the tracked price is None, the id was never traded; so its price is 0
-                price = 0 if price is None else price
                 if id in AGGREGATED_PRICES[day]:
                     # there was a trade on this day
                     price = AGGREGATED_PRICES[day][id].value()
@@ -314,6 +312,7 @@ def write_price_and_gains_csv():
                 # compute the daily gain
                 first_price = FIRST_PRICE[id-1]
                 gain = (price - first_price) / first_price if first_price is not None else 0
+                # update the row
                 pricerow.append("{:.2f}".format(price))
                 gainsrow.append("{:.2f}".format(gain))
             print(",".join(pricerow), file=pricecsv)
