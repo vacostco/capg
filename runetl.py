@@ -304,7 +304,7 @@ def write_price_and_gains_csv():
                     price_tracker[id-1] = price
                 # compute the daily gain
                 first_price = FIRST_PRICE[id-1]
-                gain = (price - first_price) / first_price if first_price is not None else 0
+                gain = (price - first_price) / first_price if first_price is not None and first_price > 0 else 0
                 # update the row
                 pricerow.append("{:.2f}".format(price))
                 gainsrow.append("{:.2f}".format(gain))
