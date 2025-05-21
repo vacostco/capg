@@ -27,6 +27,16 @@ The list of all the expected stk_id values
 ALLIDS = list(range(1,201))
 
 """
+The list of all the expected stk_id labels
+"""
+ALLTICKERS = [f"stk_{id:03d}" for id in ALLIDS]
+
+"""
+The report header row
+"""
+HEADER = ",".join(["date"]+ALLTICKERS)
+
+"""
 Regular expression used to validate the date column values
 """
 DAYRE = r"\d{4}-\d{1,2}-\d{1,2}"
@@ -277,11 +287,8 @@ def write_price_and_gains_csv():
     logging.info(f"Writing GAINS.csv ...")
     gainsrow = None
     with open("PRICE.csv", "w") as pricecsv, open("GAINS.csv", "w") as gainscsv:        
-        header = "date"
-        for id in ALLIDS:
-            header += f",stk_{id:03d}"
-        print(header, file=pricecsv)
-        print(header, file=gainscsv)
+        print(HEADER, file=pricecsv)
+        print(HEADER, file=gainscsv)
         # initialize the price tracker (accounts for missing data in the sparse array)
         price_tracker = [p if p is not None else 0 for p in FIRST_PRICE]
         for day in ALL_DAYS:
@@ -314,10 +321,7 @@ Writes VOLUME.csv - a csv file, to be loaded into the DB, which is backfilled to
 def write_volume_csv():
     logging.info(f"Writing VOLUME.csv ...")
     with open("VOLUME.csv", "w") as report:
-        header = "date"
-        for id in ALLIDS:
-            header += f",stk_{id:03d}"
-        print(header, file=report)
+        print(HEADER, file=report)
         for day in ALL_DAYS:
             row = [day]
             for id in ALLIDS:            
