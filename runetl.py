@@ -14,7 +14,7 @@ logging.basicConfig(level=logging.DEBUG, format='%(asctime)s::%(levelname)s - %(
 """
 The total number of CPUs available on this machine
 """
-NUMCPU = cpu_count() # will be 4 on the target machine
+NUMCPU = max(1,cpu_count()) # will be 4 on the target machine
 
 """
 The list of input files
@@ -355,23 +355,24 @@ def log_period_gains():
 Reads all the input CSV files and writes PRICE.csv and VOLUME.csv and GAINS.csv
 """
 def runetl(csvfiles):
-    global NUMCPU, ALL_DAYS
+    global ALL_DAYS
     if not input_files_exist(csvfiles):
         logging.critical("Missing input files.")
     else:        
-        NUMCPU = min(NUMCPU, len(ALLCSV))
-        logging.info(f"Using {NUMCPU} processors to extract data from {ALLCSV} ...")
+        nwork = min(NUMCPU, len(ALLCSV))
+        logging.info(f"Using {nwork} workers to extract data from {ALLCSV} ...")
 
         start = time()
         # Distribute the reading of CSV, one file per CPU 
-        with ThreadPoolExecutor(max_workers=NUMCPU) as executor:            
+        with ThreadPoolExecutor(max_workers=nwork) as executor:            
             executor.map(etlcsv, ALLCSV)
 
         # Sort the data once
         ALL_DAYS = sorted(AGGREGATED_PRICES.keys())        
 
-        # Initialize FIRST_PRICE, one id per CPU 
-        with ThreadPoolExecutor(max_workers=cpu_count()) as executor:            
+        # Initialize FIRST_PRICE, one id per CPU
+        nwork = min(len(ALLIDS), NUMCPU) 
+        with ThreadPoolExecutor(max_workers=nwork) as executor:            
             executor.map(find_first_price, ALLIDS)
         
         # Report what was extracted
@@ -381,7 +382,8 @@ def runetl(csvfiles):
             logging.info(f"The period read was [{ALL_DAYS[0]}, {ALL_DAYS[-1]}]")       
         
         # Write outpt, one function per CPU
-        with ThreadPoolExecutor(max_workers=2) as executor:
+        nwork = min(2, NUMCPU) 
+        with ThreadPoolExecutor(max_workers=nwork) as executor:
             executor.map(lambda func: func(), [write_volume_csv, write_price_and_gains_csv])
 
         # Log the gains (returns)
