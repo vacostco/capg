@@ -363,20 +363,24 @@ def runetl(csvfiles):
         logging.info(f"Using {NUMCPU} processors to extract data from {ALLCSV} ...")
 
         start = time()
-        with ThreadPoolExecutor(max_workers=NUMCPU) as executor:
-            # Distribute the reading of CSV, one file per CPU (or thread)
+        # Distribute the reading of CSV, one file per CPU 
+        with ThreadPoolExecutor(max_workers=NUMCPU) as executor:            
             executor.map(etlcsv, ALLCSV)
+
         # Sort the data once
         ALL_DAYS = sorted(AGGREGATED_PRICES.keys())        
-        with ThreadPoolExecutor(max_workers=cpu_count()) as executor:
-            # Initialize FIRST_PRICE, one id per CPU (or thread)
+
+        # Initialize FIRST_PRICE, one id per CPU 
+        with ThreadPoolExecutor(max_workers=cpu_count()) as executor:            
             executor.map(find_first_price, ALLIDS)
+        
+        # Report what was extracted
         end = time()    
         logging.info(f"Read {NUM_ROWS_READ} rows in {end-start:.2f} seconds.")
         if len(ALL_DAYS) > 1:
             logging.info(f"The period read was [{ALL_DAYS[0]}, {ALL_DAYS[-1]}]")       
         
-        # Write outpt
+        # Write outpt, one function per CPU
         with ThreadPoolExecutor(max_workers=2) as executor:
             executor.map(lambda func: func(), [write_volume_csv, write_price_and_gains_csv])
 
