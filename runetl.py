@@ -1,6 +1,6 @@
 import logging
 from argparse import ArgumentParser
-from os import cpu_count, path, listdir
+from os import cpu_count, path
 from concurrent.futures import ThreadPoolExecutor
 from threading import Lock
 from re import match
@@ -24,7 +24,7 @@ ALLCSV = [f"D{i}.csv" for i in range(10)]
 """
 The list of all the expected stk_id values
 """
-ALLIDS = [id for id in range(1,201)]
+ALLIDS = list(range(1,201))
 
 """
 Regular expression used to validate the date column values
@@ -80,17 +80,6 @@ class TradeData:
     def __str__(self):
         return f"{self.day:<10} {self.id:<3} {self.price:<6} {self.tradevol:<5}"
     
-    def day(self):
-        return self.day
-    
-    def id(self):
-        return self.id
-    
-    def price(self):
-        return self.price
-    
-    def tradevol(self):
-        return self.tradevol
     
 """
 Holds the values used to compute an average
@@ -237,7 +226,6 @@ def read_rows(fpath, nRows=10000):
 Adds the given price to AGGREGATED_PRICES - trade prices on the same day are added to daily average for their id
 """
 def aggregate_price(day, id, price):
-    global AGGREGATED_PRICES
     if day not in AGGREGATED_PRICES:
         AGGREGATED_PRICES[day] = {}
     if id not in AGGREGATED_PRICES[day]:
@@ -248,7 +236,6 @@ def aggregate_price(day, id, price):
 Adds the given volume to AGGREGATED_VOLUME - tradevols on the same day are summed to compute the total volume for their id per day
 """
 def aggregate_volume(day, id, tradevol):
-    global AGGREGATED_VOLUME
     if day not in AGGREGATED_VOLUME:
         AGGREGATED_VOLUME[day] = {}
     if id not in AGGREGATED_VOLUME[day]:
@@ -274,7 +261,6 @@ def etlcsv(fpath):
 Initializes PRICE_TRACKER with the earliest trade price found for id in AGGREGATED_PRICES
 """
 def find_first_price(stk_id):
-    global FIRST_PRICE
     for day in ALL_DAYS:
         if stk_id in AGGREGATED_PRICES[day]:
             FIRST_PRICE[stk_id-1] = AGGREGATED_PRICES[day][stk_id].value()
@@ -317,8 +303,8 @@ def write_price_and_gains_csv():
                 gainsrow.append("{:.2f}".format(gain))
             print(",".join(pricerow), file=pricecsv)
             print(",".join(gainsrow), file=gainscsv)
-    logging.debug(f"Done Writing PRICE.csv")
-    logging.debug(f"Done Writing GAINS.csv")
+    logging.debug("Done Writing PRICE.csv")
+    logging.debug("Done Writing GAINS.csv")
     if gainsrow is not None:
         PERIOD_GAIN = [float(gain) for gain in gainsrow[1:]]
 
@@ -340,7 +326,7 @@ def write_volume_csv():
                     tradevol = AGGREGATED_VOLUME[day][id]
                 row.append(str(tradevol))
             print(",".join(row), file=report)
-    logging.debug(f"Done Writing VOLUME.csv")
+    logging.debug("Done Writing VOLUME.csv")
 
 """
 Logs the period gains for each stk_id
