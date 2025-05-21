@@ -64,7 +64,7 @@ FIRST_PRICE = [None] * 200
 """
 Captures the gain for stk_id on the last day of the period
 """
-PERIOD_GAIN = [None] * 200 
+PERIOD_GAIN = None 
 
 """
 Holds the validated csv data read
@@ -120,7 +120,7 @@ def reset_globals():
     AGGREGATED_VOLUME = {}
     ALL_DAYS = None
     FIRST_PRICE = [None] * 200
-    PERIOD_GAIN = [None] * 200 
+    PERIOD_GAIN = None
 
 """
 Useful for testing
@@ -271,6 +271,16 @@ def etlcsv(fpath):
     logging.debug(f"Done reading {fpath}")
 
 """
+Initializes PRICE_TRACKER with the earliest trade price found for id in AGGREGATED_PRICES
+"""
+def find_first_price(stk_id):
+    global FIRST_PRICE
+    for day in ALL_DAYS:
+        if stk_id in AGGREGATED_PRICES[day]:
+            FIRST_PRICE[stk_id-1] = AGGREGATED_PRICES[day][stk_id].value()
+            break
+
+"""
 Writes PRICE.csv a csv file, to be loaded into the DB, which is backfilled to not be sparse.  
 Writes GAINS.csv which holds the daily gain relative to the first day of the period.
 An id that is never traded will have price and gain values of 0
@@ -312,8 +322,6 @@ def write_price_and_gains_csv():
     logging.debug(f"Done Writing GAINS.csv")
     if gainsrow is not None:
         PERIOD_GAIN = [float(gain) for gain in gainsrow[1:]]
-        for id in ALLIDS:
-            logging.debug(f"Gain for stk_{id:03d} was {PERIOD_GAIN[id-1]:.2f}")
 
 """
 Writes VOLUME.csv - a csv file, to be loaded into the DB, which is backfilled to not be sparse.  The volume for an id that is not traded on a given day is 0
@@ -336,14 +344,12 @@ def write_volume_csv():
     logging.debug(f"Done Writing VOLUME.csv")
 
 """
-Initializes PRICE_TRACKER with the earliest trade price found for id in AGGREGATED_PRICES
+Logs the period gains for each stk_id
 """
-def find_first_price(stk_id):
-    global FIRST_PRICE
-    for day in ALL_DAYS:
-        if stk_id in AGGREGATED_PRICES[day]:
-            FIRST_PRICE[stk_id-1] = AGGREGATED_PRICES[day][stk_id].value()
-            break
+def log_period_gains():
+    if PERIOD_GAIN and len(PERIOD_GAIN) == len(ALLIDS):
+        for id in ALLIDS:
+            logging.debug(f"Gain for stk_{id:03d} was {PERIOD_GAIN[id-1]:.2f}")
 
 """
 Reads all the input CSV files and writes PRICE.csv and VOLUME.csv and GAINS.csv
@@ -369,10 +375,13 @@ def runetl(csvfiles):
         logging.info(f"Read {NUM_ROWS_READ} rows in {end-start:.2f} seconds.")
         if len(ALL_DAYS) > 1:
             logging.info(f"The period read was [{ALL_DAYS[0]}, {ALL_DAYS[-1]}]")       
-
+        
         # Write outpt
-        write_volume_csv()        
-        write_price_and_gains_csv()        
+        with ThreadPoolExecutor(max_workers=2) as executor:
+            executor.map(lambda func: func(), [write_volume_csv, write_price_and_gains_csv])
+
+        # Log the gains (returns)
+        log_period_gains()        
         
         end = time()
         logging.info(f"Done in {end-start:.2f} seconds.")
