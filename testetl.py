@@ -4,7 +4,9 @@ from runetl import runetl, reset_globals, get_csv_names, get_days_read, get_pric
 from gencsv import gencsv
 
 def clear_all_files():
-    for fpath in get_csv_names():
+    allnames = ['PRICE.csv', 'VOLUME.csv', 'GAINS.csv']
+    allnames.extend(get_csv_names())
+    for fpath in allnames:
         if os.path.exists(fpath):
             try:
                 os.remove(fpath)

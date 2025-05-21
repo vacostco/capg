@@ -162,7 +162,7 @@ def input_files_exist(csvfiles):
         if not path.exists(fpath):
             logging.error("No such file {fpath}")
             return False    
-    return True
+    return len(ALLCSV) > 0
 
 """
 Returns a validated string in the sortable form of YYYY-MM-DD, or None on invalid input
