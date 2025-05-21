@@ -104,5 +104,5 @@ def test_data_read():
     assert volume[earliest][111] == 2, "The earliest volume was 2"
     assert prices[latest][7].value() == 0.05, "The latest price was 0.05"
     assert volume[latest][7] == 100, "The latest volume was 100"
-    assert pgains[111 - 1] == 1.17, "Bilbo gain is 7"
+    assert pgains[111 - 1] == 1.17, "Bilbo gain is 1.17"
     assert pgains[7 - 1] == 0, "Stalker gain is 0"
