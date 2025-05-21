@@ -114,12 +114,13 @@ class Average:
 Useful for testing
 """      
 def reset_globals():
-    global NUM_ROWS_READ, AGGREGATED_PRICES, AGGREGATED_VOLUME, ALL_DAYS, FIRST_PRICE
+    global NUM_ROWS_READ, AGGREGATED_PRICES, AGGREGATED_VOLUME, ALL_DAYS, FIRST_PRICE, PERIOD_GAIN
     NUM_ROWS_READ = 0
     AGGREGATED_PRICES = {}
     AGGREGATED_VOLUME = {}
     ALL_DAYS = None
     FIRST_PRICE = [None] * 200
+    PERIOD_GAIN = [None] * 200 
 
 """
 Useful for testing
