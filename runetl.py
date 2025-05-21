@@ -368,7 +368,7 @@ def runetl(csvfiles):
             executor.map(etlcsv, ALLCSV)
         # Sort the data once
         ALL_DAYS = sorted(AGGREGATED_PRICES.keys())        
-        with ThreadPoolExecutor(max_workers=NUMCPU) as executor:
+        with ThreadPoolExecutor(max_workers=cpu_count()) as executor:
             # Initialize FIRST_PRICE, one id per CPU (or thread)
             executor.map(find_first_price, ALLIDS)
         end = time()    
