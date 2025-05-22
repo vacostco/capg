@@ -108,3 +108,9 @@ def test_data_read():
     assert volume[latest][7] == 100, "The latest volume was 100"
     assert pgains[111 - 1] == 1.17, "Bilbo gain is 1.17"
     assert pgains[7 - 1] == 0, "Stalker gain is 0"
+
+def test_invalid_trades_ignored():
+    setup_test()
+    create_rows(['2001-1-1,7,-0.2,100', '1999-4-01,111,3,0', '1999-4-01,111,0,1', '2001-1-1,111,-13,100', '2001-1-1,7,0.2,100x', '2001-1-1,111,-13,', '2001-MM-1,111,13,100', '2001-1-2,111,13,100'])
+    nrows_read = runetl(get_csv_names())
+    assert nrows_read == 1, "Only one is valid"
