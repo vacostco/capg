@@ -21,7 +21,7 @@ def genvol(id):
     global VOLUME
     if id not in VOLUME:
         VOLUME[id] = randint(10000, 50000)
-    return int(VOLUME[id] * uniform(0,0.08))
+    return int(VOLUME[id] * uniform(0.001,0.08))
 
 def genday():
     """

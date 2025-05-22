@@ -211,7 +211,13 @@ def parse_trade(row, lnum, fpath):
     day = parse_day(fields[0], lnum, fpath)
     id = parse_int(fields[1], "id", lnum, fpath)
     price = parse_float(fields[2], "price", lnum, fpath)
+    if price is not None and price <= 0:
+        logging.warning(f"Invalid price \"{price}\" in {fpath} line {lnum}")
+        return
     tradevol = parse_int(fields[3], "tradevol", lnum, fpath)
+    if tradevol is not None and tradevol <= 0:
+        logging.warning(f"Invalid trade_volume \"{tradevol}\" in {fpath} line {lnum}")
+        return
     return TradeData(day, id, price, tradevol) if day is not None and id is not None and price is not None and tradevol is not None else None
 
 """
